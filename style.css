@@ -1,0 +1,84 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--black:#080808;--black2:#11100f;--gold:#cda35d;--gold2:#f0c979;--cream:#f6eee1;--muted:#b9b0a5}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--cream);font-family:Montserrat,Arial,sans-serif;line-height:1.7}
+a{text-decoration:none;color:inherit}
+.header{position:fixed;top:0;left:0;right:0;height:78px;z-index:50;display:flex;align-items:center;padding:0 5%;background:rgba(8,8,8,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(205,163,93,.22)}
+.brand{width:175px;height:68px;display:flex;align-items:center;overflow:hidden}.brand img{width:100%;height:100%;object-fit:contain;object-position:center;display:block}
+.nav{display:flex;gap:30px;margin-left:auto;margin-right:28px}.nav a{font-size:12px;text-transform:uppercase;letter-spacing:1.4px;color:#ddd;transition:.25s}.nav a:hover{color:var(--gold2)}
+.nav-order,.btn{border:1px solid var(--gold);color:var(--gold2);padding:12px 19px;text-transform:uppercase;letter-spacing:1.3px;font-size:11px;font-weight:600;transition:.25s}.nav-order:hover,.btn:hover{background:var(--gold);color:#111}
+.menu{display:none;background:none;border:0;color:var(--gold2);font-size:28px}
+.hero{height:100vh;min-height:650px;position:relative;overflow:hidden;background:radial-gradient(circle at 75% 45%,#2b2119 0,#110e0c 32%,#080808 70%)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,.96) 0%,rgba(8,8,8,.72) 46%,rgba(8,8,8,.15) 100%)}
+.hero-slide{position:absolute;inset:0;display:flex;align-items:center;padding:8% 9%;opacity:0;transform:scale(1.03);transition:opacity .7s,transform 1.2s;background-image:url("assets/catalogue.jpg");background-size:cover;background-position:center}
+.hero-slide:nth-child(2){background-position:58% center}.hero-slide:nth-child(3){background-position:42% center}
+.hero-slide.active{opacity:1;transform:scale(1)}
+.hero-content{position:relative;z-index:2;max-width:650px}.eyebrow{color:var(--gold);font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:15px}.hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(58px,8vw,112px);line-height:.9;font-weight:600;margin-bottom:28px}.hero h1 span,h2 span{color:var(--gold2)}.hero p:not(.eyebrow){max-width:550px;color:#ded5c9;font-size:16px;margin-bottom:35px}
+.slider-arrow{position:absolute;z-index:4;top:50%;transform:translateY(-50%);width:45px;height:45px;border:1px solid rgba(205,163,93,.45);background:rgba(0,0,0,.3);color:var(--gold2);font-size:34px;cursor:pointer}.prev{left:3%}.next{right:3%}.dots{position:absolute;z-index:5;bottom:35px;left:50%;transform:translateX(-50%);display:flex;gap:9px}.dot{width:8px;height:8px;border:1px solid var(--gold);border-radius:50%;background:transparent;cursor:pointer}.dot.active{background:var(--gold)}
+.section{padding:110px 7%;max-width:1400px;margin:auto}.intro{text-align:center;max-width:950px}.intro h2,.section-heading h2,.catalogue-copy h2,.order-box h2,.contact h2{font-family:"Cormorant Garamond",serif;font-size:clamp(42px,5vw,66px);line-height:1.05;font-weight:600}.intro-text{color:var(--muted);max-width:720px;margin:25px auto 0}
+.section-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:42px}.section-heading.centered{display:block;text-align:center}.arabic{font-size:17px;color:#a99c8d}
+.collection-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.collection-card{min-height:430px;position:relative;overflow:hidden;border:1px solid rgba(205,163,93,.22);display:flex;align-items:end;padding:25px;background-size:cover;background-position:center}.collection-card:before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 20%,rgba(0,0,0,.9) 90%)}.collection-card>div{position:relative;z-index:2}.collection-card h3{font-family:"Cormorant Garamond",serif;font-size:32px;color:var(--gold2);margin:8px 0}.collection-card p{font-size:12px;color:#d0c8be}.collection-card strong{display:block;margin-top:14px;font-size:10px;letter-spacing:1px;color:#eee}.collection-number{font-size:10px;color:var(--gold);letter-spacing:2px}.oud{background:radial-gradient(circle at 70% 30%,#4b3425,#111 60%)}.floral{background:radial-gradient(circle at 50% 25%,#633b46,#111 62%)}.woody{background:radial-gradient(circle at 30% 25%,#6a4a25,#111 62%)}.fresh{background:radial-gradient(circle at 65% 30%,#31504a,#111 62%)}
+.featured{background:var(--black2);max-width:none}.product-grid{max-width:1250px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product-card{text-align:center;padding:35px 20px;border:1px solid rgba(205,163,93,.2);background:#0c0c0c}.bottle{width:105px;height:175px;margin:0 auto 28px;border-radius:13px 13px 18px 18px;position:relative;border:2px solid rgba(240,201,121,.7);box-shadow:0 18px 40px rgba(0,0,0,.55)}.bottle:before{content:"";position:absolute;width:43px;height:28px;left:29px;top:-31px;border:2px solid var(--gold);background:#111;border-radius:5px}.bottle span{position:absolute;left:0;right:0;top:55px;font-family:"Cormorant Garamond",serif;font-size:46px;color:var(--gold2)}.bottle-dark{background:linear-gradient(135deg,#222,#020202)}.bottle-rose{background:linear-gradient(135deg,#6e3f48,#1b1113)}.bottle-amber{background:linear-gradient(135deg,#76501f,#25160b)}.bottle-fresh{background:linear-gradient(135deg,#2b4a43,#07100e)}.tag{font-size:9px;letter-spacing:2px;color:var(--gold);margin-bottom:5px}.product-card h3{font-family:"Cormorant Garamond",serif;font-size:32px}.product-card>p:not(.tag){font-size:11px;color:#aaa;margin-bottom:18px}.product-btn{background:none;border:0;border-bottom:1px solid var(--gold);color:var(--gold2);padding:5px 0;font-size:10px;text-transform:uppercase;letter-spacing:1.4px;cursor:pointer}
+.catalogue{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}.catalogue-copy p:not(.eyebrow){color:var(--muted);margin:20px 0 30px}.catalogue-image{border:1px solid rgba(205,163,93,.3);padding:10px}.catalogue-image img{width:100%;display:block}
+.order{max-width:none;background:linear-gradient(135deg,#17120e,#0a0a0a);text-align:center}.order-box{max-width:1050px;margin:auto}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin:50px 0}.steps b{font-family:"Cormorant Garamond",serif;font-size:35px;color:var(--gold)}.steps h3{font-family:"Cormorant Garamond",serif;font-size:27px}.steps p{font-size:11px;color:var(--muted)}
+.contact{text-align:center}.contact>p:not(.eyebrow){color:var(--muted)}.contact-grid{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:35px 0}.contact-grid a,.contact-grid span{padding:12px 16px;border:1px solid rgba(205,163,93,.2);font-size:11px;color:#ddd}.socials{display:flex;justify-content:center;gap:25px;color:var(--gold2);font-size:12px}.contact-logo{margin:42px auto 0;max-width:520px;padding:10px 18px;border-top:1px solid rgba(205,163,93,.18);border-bottom:1px solid rgba(205,163,93,.18)}.contact-logo img{width:100%;height:auto;display:block;filter:drop-shadow(0 8px 22px rgba(205,163,93,.12))}
+footer{padding:45px 7%;border-top:1px solid rgba(205,163,93,.18);text-align:center;color:#777;font-size:10px}.footer-brand{font-family:"Cormorant Garamond",serif;font-size:30px;color:#eee;margin-bottom:10px}.footer-brand span{color:var(--gold)}
+@media(max-width:900px){.nav{display:none;position:absolute;top:78px;left:0;right:0;background:#0b0b0b;padding:20px 7%;flex-direction:column;gap:18px;border-bottom:1px solid rgba(205,163,93,.2)}.nav.open{display:flex}.nav-order{display:none}.menu{display:block;margin-left:auto}.hero{min-height:700px}.hero-slide{padding:110px 8% 70px;background-position:center}.collection-grid,.product-grid{grid-template-columns:repeat(2,1fr)}.catalogue{grid-template-columns:1fr}.section{padding:80px 6%}}
+@media(max-width:560px){.brand{width:135px;height:58px}.hero h1{font-size:58px}.hero p:not(.eyebrow){font-size:14px}.collection-grid,.product-grid,.steps{grid-template-columns:1fr}.collection-card{min-height:330px}.section-heading{display:block}.arabic{display:block;margin-top:12px}.contact-grid{flex-direction:column}.slider-arrow{display:none}}
+
+/* Catalogue des parfums Homme & Femme */
+.perfumes{max-width:none;background:#0a0a0a}
+.women-section{background:linear-gradient(180deg,#0c0a0b,#080808)}
+.collection-price{text-align:center;color:var(--muted);font-size:13px;letter-spacing:1px;margin:-15px 0 35px}
+.collection-price strong{color:var(--gold2);font-size:16px}
+.catalog-tools{max-width:1250px;margin:0 auto 20px;display:flex;gap:14px;align-items:center;justify-content:space-between}
+.catalog-tools input{flex:1;background:#111;border:1px solid rgba(205,163,93,.35);color:#eee;padding:14px 16px;font-family:Montserrat,Arial,sans-serif;font-size:12px;outline:none}
+.catalog-tools input:focus{border-color:var(--gold)}
+.filter-buttons{display:flex;gap:8px}
+.filter{background:transparent;border:1px solid rgba(205,163,93,.35);color:#cfc5b8;padding:12px 16px;cursor:pointer;text-transform:uppercase;letter-spacing:1px;font-size:10px}
+.filter.active,.filter:hover{background:var(--gold);color:#111;border-color:var(--gold)}
+.perfume-grid{max-width:1250px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.perfume-card{position:relative;min-height:380px;text-align:center;padding:25px 18px 22px;border:1px solid rgba(205,163,93,.18);background:linear-gradient(145deg,#12110f,#090909);transition:transform .25s,border-color .25s,box-shadow .25s}
+.perfume-card:hover{transform:translateY(-5px);border-color:rgba(240,201,121,.6);box-shadow:0 18px 45px rgba(0,0,0,.4)}
+.perfume-card.hidden{display:none}
+.mini-bottle{width:92px;height:125px;margin:0 auto 20px;border:2px solid rgba(240,201,121,.72);border-radius:11px 11px 15px 15px;position:relative;box-shadow:0 15px 30px rgba(0,0,0,.5)}
+.mini-bottle:before{content:"";position:absolute;width:38px;height:23px;left:25px;top:-27px;border:2px solid var(--gold);background:#171411;border-radius:4px}
+.mini-bottle span{position:absolute;inset:30px 0 0;font-family:"Cormorant Garamond",serif;font-size:43px;color:var(--gold2)}
+.homme-bottle{background:linear-gradient(135deg,#31281e,#050505)}
+.femme-bottle{background:linear-gradient(135deg,#6b3e49,#160d10)}
+.perfume-info{display:flex;flex-direction:column;align-items:center}
+.perfume-code{font-size:8px;letter-spacing:2px;color:#8e8171;margin-bottom:4px}
+.perfume-card .tag{margin-bottom:2px}
+.perfume-card h3{font-family:"Cormorant Garamond",serif;font-size:25px;line-height:1.1;margin-bottom:6px}
+.notes{font-size:9px!important;color:#aaa!important;line-height:1.4;min-height:27px;margin-bottom:10px!important}
+.price-row{width:100%;display:flex;justify-content:center;align-items:center;gap:10px;margin-bottom:10px}
+.price-row strong{font-family:"Cormorant Garamond",serif;color:var(--gold2);font-size:23px}
+.price-row span{font-size:9px;letter-spacing:1.5px;color:#999}
+.perfume-btn{font-size:9px!important}
+
+@media(max-width:1100px){.perfume-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){.catalog-tools{flex-direction:column;align-items:stretch}.filter-buttons{justify-content:center}.perfume-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.perfume-grid{grid-template-columns:1fr}.catalog-tools input{width:100%}.filter{flex:1;padding:11px 8px}.perfume-card{min-height:350px}}
+
+/* Sélecteur Homme / Femme — une seule page */
+.collection-switcher{max-width:none;text-align:center;padding-top:75px;padding-bottom:35px;background:#0b0b0b}
+.switcher-text{color:var(--muted);font-size:12px;margin-top:12px}
+.switch-buttons{display:flex;justify-content:center;gap:12px;margin:28px auto 0;flex-wrap:wrap}
+.switch-btn{min-width:190px;padding:15px 25px;background:transparent;border:1px solid rgba(205,163,93,.45);color:#ddd;cursor:pointer;text-transform:uppercase;letter-spacing:1.5px;font-size:10px;transition:.25s}
+.switch-btn.active,.switch-btn:hover{background:var(--gold);border-color:var(--gold);color:#111}
+.collection-panel{display:none}
+.collection-panel.active-panel{display:block}
+/* La photo fournie remplace les bouteilles fictives */
+.product-image,.perfume-image{overflow:hidden;background:#080808!important;display:flex;align-items:center;justify-content:center}
+.product-image img,.perfume-image img{width:100%;height:100%;object-fit:cover;display:block}
+.product-image img{border-radius:11px 11px 16px 16px}
+.perfume-image{width:150px;height:185px;border-radius:14px;margin:0 auto 20px;border:1px solid rgba(240,201,121,.45);box-shadow:0 15px 30px rgba(0,0,0,.5)}
+.perfume-image img{object-position:center}
+.perfume-image:before{display:none}
+@media(max-width:560px){.switch-buttons{gap:8px}.switch-btn{width:100%;min-width:0}.perfume-image{width:145px;height:180px}}
+
+/* Slide image SAIFOR fournie */
+.image-only-slide{padding:0;background-image:none!important;background:#080808;align-items:stretch}
+.image-only-slide .hero-slide-image{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.image-only-slide:after{display:none}
+@media(max-width:900px){.image-only-slide{padding:0}.image-only-slide .hero-slide-image{object-position:center}}
